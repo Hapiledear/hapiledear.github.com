@@ -12,7 +12,7 @@
     
     <title>
         
-            归档 | 
+            拜占庭将军问题 | 
         
         Hexo
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="John Doe">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="编程经验分享,读书心得">
+    <meta name="keywords" content="编程经验分享,读书心得,区块链">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档 | Hexo">
+    <meta property="og:title" content="拜占庭将军问题 | Hexo">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="区块链"> 
 
+    
+        <meta property="article:published_time" content="3月 27, 2018" />
+        <meta property="article:modified_time" content="3月 31, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档 | Hexo">
+    <meta name="twitter:title" content="拜占庭将军问题 | Hexo">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/27/拜占庭将军问题/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hexo",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "John Doe",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "headline": "拜占庭将军问题",
+    "url": "http://yoursite.com/2018/03/27/拜占庭将军问题/index.html",
+    "datePublished": "3月 27, 2018",
+    "dateModified": "3月 31, 2018",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -275,155 +308,276 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#区块链的发源-拜占庭将军问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">区块链的发源 拜占庭将军问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#口头协议"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">口头协议</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#口头协议算法-OM-m"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">口头协议算法$OM(m)$</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#书面协议"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">书面协议</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#书面协议算法-SM-m"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">书面协议算法$SM(m)$</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#问题的推广"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">问题的推广</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考文章："><span class="post-toc-number">1.4.</span> <span class="post-toc-text">参考文章：</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/31/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/31/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Doe's avatar">
-            </div>
-            <div>
-                <strong>John Doe</strong>
-                <span>3月 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/hexo的使用/">hexo的使用</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/27/拜占庭将军问题/">拜占庭将军问题</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/27/拜占庭将军问题/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Doe's avatar">
-            </div>
-            <div>
-                <strong>John Doe</strong>
-                <span>3月 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/区块链/">区块链</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                拜占庭将军问题
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Doe</strong>
+        <span>3月 27, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/区块链/">区块链</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=拜占庭将军问题&url=http://yoursite.com/2018/03/27/拜占庭将军问题/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=拜占庭将军问题&url=http://yoursite.com/2018/03/27/拜占庭将军问题/index.html&via=John Doe" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/27/拜占庭将军问题/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/27/拜占庭将军问题/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="区块链的发源-拜占庭将军问题"><a href="#区块链的发源-拜占庭将军问题" class="headerlink" title="区块链的发源 拜占庭将军问题"></a>区块链的发源 拜占庭将军问题</h1><ul>
+<li><p>问题描述：</p>
+<p>10支军队去进攻一座敌人的城池，但是敌人可以同时抵御5支军队的进攻。因此至少需要同时6支军队进攻才能打败敌人。</p>
+<p>他们包围了敌人，依靠通信兵进行通信来协商进攻意图。但是10支军队中可能有叛徒，叛徒可以擅自改变命令。</p>
+<p>在这种情况下，将军们能否找到一种协议进行远程协商，从而赢得战斗？</p>
+<p>前置条件1:通信的信道是绝对可靠的。</p>
+</li>
+<li><p>问题分析：</p>
+<p>“一致性”:忠诚的将军能够达成一致的命令，进攻或撤退都行。</p>
+<p>“正确性”:每一位忠诚的将军都正确的表达了自己的意思，不会因为叛徒的存在而让别的将军认为自己是叛徒儿不采用自己传达的消息。</p>
+</li>
+<li><p>建模分析：</p>
+<p>定义变量$vi$为其他将军收到第i个将军的命令值；i将军会把自己的判断作为$vi$.</p>
+<p>定义一个函数来处理向量$(v1,v2,…vn)$,代表了多数人的意见，个将军用这个函数的结果作为自己最终采用的命令。</p>
+<ul>
+<li>条件1:根据<strong>一致性</strong>可以得出，每一个忠诚的将军必须得到相同的$(v1,v2,…vn)$指令集合。</li>
+<li>条件2:根据<strong>正确性</strong>可以得出，若i将军是忠诚的，其他忠诚的将军必须以他送出的值作为$vi$.</li>
+<li>条件1还可以改写成条件1’:无论i将军是否是叛徒，任何两个忠诚的将军都使用相同的$vi$.</li>
+</ul>
+</li>
+<li><p>问题简化：</p>
+<p>条件1‘和条件2都只涉及一个将军$i$如何帮助别的将军接受自己送出的消息$vi$,所有可以简化为<strong>司令—副官</strong>模型：一个司令把自己的问题传递给$n-1$个副官，使得：</p>
+<p><strong>IC1</strong>：所有忠诚的副官遵守一个命令，即一致性。</p>
+<p><strong>IC2</strong>：若司令是忠诚的，每一个忠诚的副官都遵守他发出的命令，即正确性。</p>
+<p>在经典的情形下，可以找到两种办法，<a href="##口头协议">口头协议</a>和<a href="##书面协议">书面协议</a>。下面将对这两种算法进行推演和证明。</p>
+</li>
+</ul>
+<h2 id="口头协议"><a href="#口头协议" class="headerlink" title="口头协议"></a>口头协议</h2><p>前置条件：信道可信，且消息来源可知。</p>
+<p>结论：若叛徒数量少于$1/3$,则该问题可解。即当叛徒数为$$m$$时，将军总数$n&gt;=3m+1$,问题可解。</p>
+<h3 id="口头协议算法-OM-m"><a href="#口头协议算法-OM-m" class="headerlink" title="口头协议算法$OM(m)$"></a>口头协议算法$OM(m)$</h3><p>$OM(0)$时：将军发送命令，每个副官采用将军的命令行动。</p>
+<p>$OM(m)$时: å</p>
+<ol>
+<li>将军发送命令，每个副官都将这个命令广播出去，并且会收到其他n-2个副官的他们从将军那收到的命令。</li>
+<li>对于a副官而言，为确认b副官消息的可靠性，他将会再次将从b副官处收到的命令广播出去，并且会收到其他n-3个副官的它们从副官b那收到的命令,此时就处于$OM(m-1)$内。</li>
+<li>循环步骤2，直到$OM(0)$,之后，a副官将得到一个长度为$n-1$的命令集合，他将取其中出现<strong>次数最多的命令作为最终决策</strong>。</li>
+</ol>
+<p>实例推演请见<a href="http://www.8btc.com/baizhantingjiangjun" target="_blank" rel="noopener">参考文章1</a></p>
+<h2 id="书面协议"><a href="#书面协议" class="headerlink" title="书面协议"></a>书面协议</h2><p>口头协议的缺点是消息不能追本溯源，这使得口头协议必须在四模冗余的情况下才能确保正确。</p>
+<p>书面协议则引入了签名机制，确保消息能够追本溯源。</p>
+<p><strong>签名机制</strong>必须确保 签名不可伪造，一旦被篡改即可发现，而叛徒可以伪造其他叛徒的签名；任何人都可以验证签名的可靠性。</p>
+<h3 id="书面协议算法-SM-m"><a href="#书面协议算法-SM-m" class="headerlink" title="书面协议算法$SM(m)$"></a>书面协议算法$SM(m)$</h3><ol>
+<li>将军签署命令并发送给每个副官</li>
+<li>a副官收到了将军的命令$v:0$,将$v$加入集合$Vi$中，并将命令$v:0:L1$分发给其他副官</li>
+<li>a副官接收到了形如$v:0:Li:…Lj$的消息，且v不在集合$Vi$中,那么将v添加到$Vi$中，</li>
+<li>如果$Li…Lj$的个数小于m，在此命令的末尾追加a的签名$v:0:Li:…Lj:L1$ 并发送给不在$Li…Lj$中的其他副官。</li>
+<li>当a副官再也收不到命令时，使用choive(Vi)函数进行最终决策。</li>
+</ol>
+<p>根据该算法可以看出，如果司令是忠诚的，最终所有忠诚的副官都将得到一个单点集{v};如果司令并非忠诚，所有忠诚的副官得到的会是相同的Vi,那么它们采用choice()函数得出的最终决策也一定相同。</p>
+<p>实例推演请见<a href="http://www.8btc.com/baizhantingjiangjun" target="_blank" rel="noopener">参考文章1</a></p>
+<h2 id="问题的推广"><a href="#问题的推广" class="headerlink" title="问题的推广"></a>问题的推广</h2><p>拜占庭将军问题实际上是在分布式系统中，如何确保各个节点的信息保持一致的问题。</p>
+<p>分散包围的10支军队可以比作在网络中的10个节点，其中的叛徒可以比作出错的节点，不管它是有意还是无意；</p>
+<p>节点之间的通信可以使用互联网进行传播，确保稳定性；</p>
+<p>签名可以使用非对称加密技术确保其不可伪造和可验证性；</p>
+<p>为了确保一段时间内只有一个节点传播信息，引入了<strong>工作量</strong>机制—谁先完成工作，谁才能传播消息；</p>
+<p>为了使别人信服，需要进行<strong>工作量证明</strong>，而进行工作和证明中所消耗的资源，便是建立信任的成本。</p>
+<p>由此，在一个分布式系统中，尽管有坏人，坏人可以做任意事情；但只要大多数是好人，就可以<strong>去中心化</strong>的达成<strong>共识</strong>。</p>
+<p>基于互联网的区块链技术，它克服了口头协议与书面协议的种种缺点，使用消息加密技术、以及公平的工作量证明机制，创建了一组所有将军都认可的协议，这套协议的出现，拜占庭将军问题也就完美的得到了解决</p>
+<h2 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h2>
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/03/31/hello-world/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
